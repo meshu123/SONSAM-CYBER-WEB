@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0A192F;
+  --color-gold: #C5A059;
+  --color-light-gold: #F4D03F;
+  --color-deep-bg: #050C1A;
+  --color-glass: rgba(255, 255, 255, 0.03);
+}
+
+:root {
+  --glow: 0 0 15px rgba(197, 160, 89, 0.3);
+}
+
+@layer base {
+  body {
+    @apply bg-deep-bg text-[#E0E6ED];
+  }
+}
+
+.glass-card {
+  @apply bg-glass border border-white/10 rounded-xl backdrop-blur-md shadow-lg;
+}
+
+.glow-hover:hover {
+  box-shadow: var(--glow);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #C5A059, #8B6E37);
+}
